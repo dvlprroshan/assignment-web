@@ -1,0 +1,92 @@
+@use "./utils/variable.scss" as var;
+
+.signup_page_form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 5% 0;
+  font-family: "Roboto";
+}
+
+.main_fm {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: url("/wallpaper.jpg") no-repeat center center fixed;
+}
+
+.signup_page_form form {
+  width: 400px;
+  max-width: 500px;
+  box-shadow: 0 0 10px 0 var.$color-background;
+  padding: 30px 20px;
+  background: white;
+  opacity: 0.7;
+  border-radius: 8px;
+}
+
+.spf_title {
+  font-size: 35px;
+  text-align: center;
+  // text-transform: uppercase;
+  font-weight: bold;
+  color: var.$color-secondary;
+}
+.full_name {
+  display: flex;
+  column-gap: 10px;
+}
+
+.country_elm {
+  margin-top: 20px;
+  // height: 60px;
+}
+
+.have_acc {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+  color: var.$color-secondary;
+  a {
+    font-weight: bold;
+    &:hover {
+      color: var.$color-primary2;
+    }
+  }
+}
+
+.error_list {
+  margin-left: -20px;
+  li {
+    color: var.$color-danger;
+  }
+}
+
+.change_page {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  div {
+    font-size: 22px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    a {
+      color: var.$color-secondary;
+    }
+    text-decoration: underline;
+  }
+  background: rgb(207, 207, 207);
+  //   cursor: pointer;
+}
+
+.cp_active.cp_active {
+  color: white;
+  text-decoration: none;
+  background-color: var.$color-primary2;
+}

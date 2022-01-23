@@ -1,0 +1,51 @@
+@use "../utils/variable.scss" as var;
+
+.input_elm {
+  height: 45px;
+  width: 100%;
+  margin-top: 25px;
+  background: white;
+  // transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  position: relative;
+  input,
+  textarea {
+    width: 100%;
+    // transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    border: 2px solid var.$color-secondary;
+    border-radius: 8px;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 18px;
+    font-style: italic;
+    color: var.$color-secondary2;
+    &:focus {
+      border: 2px solid var.$color-primary2;
+      outline: none;
+      // label{
+      //     color:red;
+      // }
+    }
+  }
+  &:focus-within label {
+    color: var.$color-primary2;
+  }
+  label {
+    background: white;
+    position: absolute;
+    top: -10px;
+    font-size: 16px;
+    left: 20px;
+    padding: 0 5px;
+    font-weight: bold;
+    color: var.$color-secondary;
+  }
+}
+.input_elm_error {
+  input {
+    border: 2px solid var.$color-danger;
+    // color: var.$color-danger;
+  }
+  label {
+    color: var.$color-danger;
+  }
+}
